@@ -1,0 +1,28 @@
+A terminologia "tabela à esquerda" e "tabela à direita" é usada para descrever 
+a ordem das tabelas em uma operação JOIN em SQL. Isso é especialmente importante 
+quando se trabalha com tipos de JOIN que não sejam o INNER JOIN, como o LEFT JOIN, 
+RIGHT JOIN e FULL JOIN.
+
+Na instrução SQL, a "tabela à esquerda" é a tabela que aparece antes da cláusula 
+JOIN, e a "tabela à direita" é a que aparece depois. Por exemplo:
+
+SELECT * FROM tabela1 LEFT JOIN tabela2 ON tabela1.id = tabela2.id;
+
+Neste exemplo, tabela1 é a "tabela à esquerda" e tabela2 é a "tabela à direita".
+
+Quando utilizamos LEFT JOIN, são retornados todos os registros da "tabela à esquerda" 
+(neste caso, tabela1) e os registros correspondentes da "tabela à direita" (tabela2). 
+Se não houver correspondência, o resultado é NULL do lado direito.
+
+Em contraste, quando utilizamos RIGHT JOIN, são retornados todos os registros da 
+"tabela à direita" (tabela2) e os registros correspondentes da "tabela à esquerda" 
+(tabela1). Se não houver correspondência, o resultado é NULL do lado esquerdo.
+
+Portanto, a diferença entre uma tabela à esquerda e uma tabela à direita é a ordem em 
+que elas aparecem na sua consulta SQL e, consequentemente, como os dados serão unidos 
+e apresentados no resultado
+
+
+FULL (OUTER) JOIN: A instrução FULL JOIN retorna todos os registros quando há uma 
+correspondência na tabela à esquerda ou na tabela à direita. Se não houver correspondência, 
+o resultado é NULL em ambos os lados.

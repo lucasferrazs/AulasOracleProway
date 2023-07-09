@@ -1,0 +1,47 @@
+Modelo Relacional
+
+O modelo relacional é um tipo de estrutura de banco de 
+dados que organiza os dados em tabelas, ou relações, que 
+consistem em linhas e colunas. Cada linha em uma tabela 
+representa um registro distinto que está associado a uma 
+chave primária, e cada coluna representa um atributo desse 
+registro.
+
+As tabelas são usadas para armazenar informações sobre os 
+objetos a serem representados no banco de dados. Por exemplo, 
+uma tabela "Funcionários" pode conter registros com atributos 
+como "ID do Funcionário", "Nome", "Cargo" e "Salário".
+
+O aspecto mais importante dos bancos de dados relacionais é a 
+capacidade de gerar relações entre as tabelas. Isso é geralmente 
+feito usando chaves estrangeiras. Uma chave estrangeira é uma 
+coluna que cria uma relação entre duas tabelas. O valor em uma 
+chave estrangeira deve sempre se referir a um valor existente em 
+uma chave primária de outra - ou a mesma - tabela.
+
+Linguagem SQL
+
+SQL (Structured Query Language) é uma linguagem padrão usada 
+para realizar operações em um banco de dados relacional. 
+Ela pode ser usada para acessar, manipular e controlar os dados.
+
+Existem vários comandos SQL, incluindo:
+
+SELECT: usado para selecionar dados de uma base de dados.
+UPDATE: usado para atualizar dados em uma base de dados.
+DELETE: usado para excluir dados de uma base de dados.
+INSERT INTO: usado para inserir novos dados em uma base de dados.
+CREATE DATABASE: usado para criar uma nova base de dados.
+ALTER DATABASE: usado para modificar uma base de dados.
+CREATE TABLE: usado para criar uma nova tabela.
+ALTER TABLE: usado para modificar uma tabela.
+DROP TABLE: usado para excluir uma tabela.
+CREATE INDEX: usado para criar um índice (search key).
+DROP INDEX: usado para excluir um índice.
+O SQL também possui recursos avançados, como consultas aninhadas, 
+joins e funções de agregação, para realizar operações mais complexas nos dados.
+
+Em resumo, o modelo relacional e a linguagem SQL são fundamentais para o 
+funcionamento de muitos sistemas de gerenciamento de banco de dados, 
+permitindo aos usuários criar, manipular e gerenciar seus dados de 
+maneira eficiente e eficaz.

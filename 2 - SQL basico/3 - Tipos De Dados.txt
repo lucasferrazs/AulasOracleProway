@@ -1,0 +1,31 @@
+Os sistemas de banco de dados suportam vários tipos de dados que podem ser usados ao criar tabelas. 
+Esses tipos de dados determinam o tipo de dados que você pode armazenar em uma coluna específica de 
+uma tabela. Aqui estão alguns dos tipos de dados mais comuns usados no SQL:
+
+Tipos Numéricos
+
+INTEGER (ou INT): usado para números inteiros.
+FLOAT: usado para números reais (com decimais).
+DECIMAL: usado para números exatos, útil para armazenar coisas como valores monetários.
+Tipos de Caracteres
+
+CHAR: uma string de comprimento fixo.
+VARCHAR: uma string de comprimento variável.
+TEXT: uma string de comprimento muito longo.
+Tipos de Data e Hora
+
+DATE: usado para datas (ano, mês, dia).
+TIME: usado para hora.
+DATETIME ou TIMESTAMP: usado para data e hora.
+Tipos Lógicos
+
+BOOLEAN: usado para valores verdadeiro ou falso.
+Tipos Binários
+
+BINARY: usado para armazenar dados binários.
+VARBINARY: um tipo binário de comprimento variável.
+Tipos Especiais
+
+ENUM: um valor escolhido de uma lista de valores predefinidos.
+SET: uma coleção de valores permitidos.
+BLOB: usado para armazenar grandes quantidades de dados binários, como imagens ou arquivos multimídia.

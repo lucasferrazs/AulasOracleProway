@@ -1,0 +1,19 @@
+Subconsulta (Subquery)
+
+Uma subconsulta é uma consulta que está embutida dentro de outra consulta. Uma subconsulta 
+pode ser usada em vários lugares, como na cláusula SELECT, WHERE, FROM e HAVING. Uma 
+subconsulta pode retornar um único valor, uma única linha, uma única coluna ou uma tabela.
+
+Por exemplo, a seguinte consulta retorna a média de salário dos funcionários:
+
+SELECT AVG(salary) FROM employees;
+
+Podemos usar este resultado em uma subconsulta para encontrar todos os funcionários 
+que ganham mais do que a média:
+
+SELECT employee_name, salary
+FROM employees
+WHERE salary > (SELECT AVG(salary) FROM employees);
+
+Neste exemplo, a subconsulta (SELECT AVG(salary) FROM employees) calcula a média salarial e a 
+consulta principal usa esse resultado para encontrar todos os funcionários com salários acima da média.

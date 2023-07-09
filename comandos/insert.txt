@@ -1,0 +1,17 @@
+insert into autor values(1,'lucas',1999,'m');
+
+insert into livro values(1,'harry potter',1999,250,1);
+insert into livro values(2,'persi',2002,270,1);
+insert into livro values(3,'BANANA',2006,286,1);
+insert into livro values(4,'VIDA',2004,150,1);
+insert into livro values(5,'professor',2005,350,1);
+insert into livro values(6,'aluno',2003,420,1);
+
+insert into autor values(1,'lucas',1986,'m');
+insert into autor values(2,'roberto',1985,'m');
+insert into autor values(3,'paula',1975,'f');
+insert into autor values(4,'rodrigo',1976,'m');
+insert into autor values(5,'marcelo',1983,'m');
+insert into autor values(6,'pedro',1956,'m');
+insert into autor values(7,'thiago',1978,'m');
+insert into autor values(8,'lucio',1996,'m');

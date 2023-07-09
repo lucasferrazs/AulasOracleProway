@@ -1,0 +1,45 @@
+Obtendo a data e hora atual: A função SYSDATE retorna a data e a hora atuais.
+
+Exemplo:
+
+SELECT SYSDATE FROM dual;
+
+Extraindo partes de uma data: As funções EXTRACT(YEAR FROM date), 
+EXTRACT(MONTH FROM date), EXTRACT(DAY FROM date) podem ser usadas para 
+extrair partes específicas de uma data.
+
+Exemplo:
+
+SELECT ORDER_ID, EXTRACT(YEAR FROM ORDER_DATE) AS Year, EXTRACT(MONTH FROM ORDER_DATE) 
+AS Month, EXTRACT(DAY FROM ORDER_DATE) AS Day 
+FROM ORDERS;
+
+Adicionando e subtraindo datas: No Oracle, você pode adicionar ou subtrair um 
+número de dias a uma data simplesmente usando os operadores + e -.
+
+Exemplo
+
+SELECT SYSDATE + 1 as Tomorrow FROM dual;
+SELECT SYSDATE - 1 as Yesterday FROM dual;
+
+Formatando datas: A função TO_CHAR(date, 'format') pode ser usada para 
+formatar a maneira como uma data é apresentada.
+
+Exemplo:
+
+SELECT TO_CHAR(SYSDATE, 'YYYY-MM-DD HH24:MI:SS') FROM dual;
+
+Diferença entre datas: A diferença entre duas datas no Oracle é 
+calculada simplesmente subtraindo uma data da outra.
+
+Exemplo:
+
+SELECT TO_DATE('2020-12-31', 'YYYY-MM-DD') - TO_DATE('2020-01-01', 'YYYY-MM-DD') 
+FROM dual;  -- Retorna 365
+
+Conversão de Strings para Datas: A função TO_DATE(string, 'format') é 
+útil para converter uma string para uma data.
+
+Exemplo:
+Por favor, note que a palavra-chave dual é usada no Oracle para selecionar a partir 
+de uma tabela dummy de linha única fornecida pelo Oracle.

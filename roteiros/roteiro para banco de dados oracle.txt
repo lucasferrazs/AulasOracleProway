@@ -1,0 +1,56 @@
+1. Introdução a Bancos de Dados
+
+Compreendendo o que é um banco de dados
+Modelo relacional e linguagem SQL
+Introdução ao Oracle Database
+Instalação do Oracle Database
+2. SQL Básico
+
+Compreendendo DDL, DML e DCL
+DDL (Data Definition Language): CREATE, ALTER, DROP
+DML (Data Manipulation Language): SELECT, INSERT, UPDATE, DELETE
+DCL (Data Control Language): GRANT, REVOKE
+Filtros e Classificação
+WHERE, ORDER BY
+Funções de agregação
+COUNT, AVG, SUM, MAX, MIN
+
+/////////////////////////////////////////////////////////////
+
+3. SQL Avançado
+
+Join e União
+INNER JOIN, LEFT/RIGHT/FULL OUTER JOIN
+UNION, UNION ALL
+Subconsulta e CTEs (Common Table Expressions)
+Trabalhando com datas
+Views
+Indexes
+4. PL/SQL
+
+Introdução ao PL/SQL
+Variáveis e Constantes
+Estruturas de controle de fluxo
+Cursors
+Tratamento de exceções
+Procedimentos e Funções
+Triggers
+
+5. Administração do Oracle Database
+
+Arquitetura do Oracle Database
+Gerenciamento de usuários
+Segurança do banco de dados
+Backup e recuperação
+Performance tuning
+6. Oracle Database Advanced Concepts
+
+Oracle Real Application Clusters (RAC)
+Oracle Data Guard
+Oracle GoldenGate
+Oracle Exadata
+7. Oracle Cloud
+
+Introdução ao Oracle Cloud
+Oracle Autonomous Database
+Migração para Oracle Cloud

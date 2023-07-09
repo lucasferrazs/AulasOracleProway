@@ -1,0 +1,12 @@
+No PL/SQL, as variáveis e constantes são declaradas na seção DECLARE de um bloco de código, e cada uma deve ter um tipo de dados associado. Ambas são usadas para armazenar dados que podem ser usados ​​mais tarde no bloco de código.
+
+Variáveis
+
+Uma variável é um nome simbólico para um local de armazenamento que contém um valor que pode ser modificado durante a execução do programa. Aqui está um exemplo de como declarar e usar uma variável:
+
+DECLARE
+   my_var NUMBER(5);
+BEGIN
+   my_var := 100;
+   dbms_output.put_line('Valor de my_var: ' || my_var);
+END;

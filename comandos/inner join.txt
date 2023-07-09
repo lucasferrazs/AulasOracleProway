@@ -1,0 +1,42 @@
+create table livro(
+
+	id_livro number primary key ,
+
+	titulo varchar(30),
+
+	lancamento number,
+	preco float,
+
+	idautor number,
+
+	foreign key(idautor)
+
+	references autor(id_autor)
+
+);
+
+create table autor(
+
+	id_autor int primary key,
+
+	nome varchar(30),
+
+	nascimento number,
+
+	sexo char(1)
+
+);
+drop table autor;
+drop table livro;
+
+insert into autor values(1,'lucas',1999,'m');
+
+insert into livro values(1,'harry potter',1999,250,1);
+
+select * from livro;
+
+select livro.id_livro, livro.titulo, livro.lancamento, autor.id_autor, autor.nome from livro
+	inner join autor
+	on autor.id_autor = livro.idautor;
+    
+    

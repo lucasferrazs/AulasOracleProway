@@ -1,0 +1,20 @@
+CTEs (Common Table Expressions)
+
+Um CTE (Common Table Expression) ou "expressão de tabela comum" é uma tabela temporária e nomeada 
+que você pode referenciar dentro de uma instrução SELECT, INSERT, UPDATE, or DELETE. Os CTEs 
+ajudam a simplificar algumas consultas e podem ser usados para dividir uma consulta complexa em 
+partes mais simples e legíveis.
+
+Aqui está um exemplo de como usar um CTE. Suponha que você queira calcular o salário médio dos 
+funcionários e depois encontrar todos os funcionários que ganham mais do que a média. Você pode 
+usar um CTE para isso:
+
+WITH AvgSalary AS (
+    SELECT AVG(salary) AS average FROM employees
+)
+SELECT employee_name, salary
+FROM employees
+WHERE salary > (SELECT average FROM AvgSalary);
+
+Neste exemplo, o CTE AvgSalary calcula o salário médio dos funcionários. Em seguida, a consulta 
+principal usa este CTE para encontrar todos os funcionários que ganham mais do que a média.

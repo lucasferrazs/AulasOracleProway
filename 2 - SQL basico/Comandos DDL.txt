@@ -1,0 +1,41 @@
+DDL ou Data Definition Language realmente se refere a comandos SQL que 
+são usados para definir ou alterar a estrutura do banco de dados, como 
+criar, alterar e excluir tabelas e outros objetos do banco de dados. 
+Aqui está uma breve descrição dos comandos DDL mais comuns:
+
+CREATE: Este comando é usado para criar o banco de dados ou suas objetos 
+(como tabelas, índices, procedimentos armazenados, visões, triggers, etc).
+
+Exemplo de criação de tabela:
+
+CREATE TABLE funcionarios (
+    ID INT PRIMARY KEY,
+    nome VARCHAR(100),
+    idade INT,
+    salario DECIMAL(10, 2)
+);
+
+/************************************************************************/
+
+ALTER: Este comando é usado para alterar a estrutura de um objeto de banco 
+de dados existente em um banco de dados. Você pode usar o comando ALTER 
+para adicionar, excluir/descartar ou modificar colunas em uma tabela existente. 
+Você também pode usar o comando ALTER para adicionar e descartar várias 
+restrições em uma tabela existente.
+
+Exemplo de alteração de tabela (adicionar uma coluna):
+
+ALTER TABLE funcionarios ADD email VARCHAR(100);
+
+/************************************************************************/
+
+DROP: Este comando é usado para excluir um objeto do banco de dados. 
+Se você descartar uma tabela, todas as linhas na tabela serão excluídas 
+e a estrutura da tabela será removida do banco de dados.
+
+Exemplo de exclusão de tabela:
+
+DROP TABLE funcionarios;
+
+Por favor, substitua funcionarios com o nome da tabela que você deseja 
+criar, alterar ou descartar.

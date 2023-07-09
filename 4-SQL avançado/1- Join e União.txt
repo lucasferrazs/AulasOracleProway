@@ -1,0 +1,70 @@
+Vamos entender o que são JOIN e UNION no contexto de um banco de dados relacional, 
+especificamente usando a linguagem SQL.
+
+JOIN
+
+A operação JOIN é usada para combinar linhas de duas ou mais tabelas, com base em 
+uma relação de coluna(s) relacionada(s) entre elas, ou seja, um campo comum entre 
+as tabelas. Existem diferentes tipos de JOINs:
+
+INNER JOIN: Retorna os registros que têm correspondência em ambas as tabelas.
+
+LEFT JOIN (ou LEFT OUTER JOIN): Retorna todos os registros da tabela à esquerda, 
+e os registros correspondentes da tabela à direita. Se não houver correspondência, 
+o resultado é NULL à direita.
+
+RIGHT JOIN (ou RIGHT OUTER JOIN): Retorna todos os registros da tabela à direita, 
+e os registros correspondentes da tabela à esquerda. Se não houver correspondência, 
+o resultado é NULL à esquerda.
+
+FULL JOIN (ou FULL OUTER JOIN): Retorna todos os registros quando há uma 
+correspondência em uma das tabelas à esquerda ou à direita.
+
+
+UNION
+
+A operação UNION é usada para combinar o conjunto de resultados de duas ou mais instruções 
+SELECT. A UNION remove duplicatas. Para manter as duplicatas, você pode usar UNION ALL.
+
+Existem algumas regras para usar UNION:
+
+Cada instrução SELECT dentro do UNION deve ter o mesmo número de colunas.
+As colunas também devem ter tipos de dados semelhantes.
+As colunas em cada instrução SELECT também devem estar na mesma ordem.
+A principal diferença entre UNION e JOIN é que JOIN é usado para combinar colunas de diferentes 
+tabelas, enquanto UNION é usado para combinar linhas de diferentes consultas SELECT.
+
+tabela1
++----+-------+
+| id | nome  |
++----+-------+
+|  1 | João  |
+|  2 | Maria |
++----+-------+
+
+tabela2
++----+-------+
+| id | nome  |
++----+-------+
+|  1 | Pedro |
+|  2 | Ana   |
++----+-------+
+
+
+SELECT nome FROM tabela1
+UNION
+SELECT nome FROM tabela2
+
+Isso retornaria todos os nomes únicos das duas tabelas.
+
+Um JOIN poderia ser:
+
+SELECT tabela1.nome, tabela2.nome
+FROM tabela1
+INNER JOIN tabela2 ON tabela1.id = tabela2.id
+
+Isso retornaria um conjunto de resultados com os nomes que estão na mesma linha 
+em ambas as tabelas (ou seja, têm o mesmo id).
+
+
+

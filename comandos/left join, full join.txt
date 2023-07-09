@@ -1,0 +1,13 @@
+SELECT livro.id_livro, livro.titulo, livro.lancamento, autor.id_autor, autor.nome FROM livro
+LEFT JOIN  
+autor on autor.id_autor = livro.idautor; 
+
+SELECT livro.id_livro, livro.titulo, livro.lancamento, autor.id_autor, autor.nome FROM autor
+RIGHT JOIN  
+livro on autor.id_autor = livro.idautor; 
+
+SELECT livro.id_livro, livro.titulo, livro.lancamento, autor.id_autor, autor.nome FROM autor
+FULL JOIN  
+livro on autor.id_autor = livro.idautor; 
+
+    

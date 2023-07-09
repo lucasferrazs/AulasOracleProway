@@ -1,0 +1,23 @@
+Tabelas
+
+Uma tabela é a principal estrutura de armazenamento em um banco de dados relacional. 
+Cada tabela possui um nome único dentro do banco de dados e contém registros (linhas) 
+com o mesmo tipo de informações.
+
+Por exemplo, você pode ter uma tabela chamada "Clientes" que contém informações sobre 
+todos os seus clientes. As colunas nesta tabela podem incluir "ID_Cliente", "Nome", 
+"Endereço", "Número de telefone", etc. Cada coluna armazena um tipo específico de dado 
+(números, strings, datas, etc.)
+
+Registros
+
+Um registro (também chamado de linha) em um banco de dados é uma entrada individual em uma tabela. 
+Cada registro na tabela "Clientes" representaria um único cliente.
+
+Cada registro consiste em um ou mais campos (colunas) que contêm os dados. 
+No exemplo da tabela "Clientes", um registro pode ser:
+
+ID_Cliente: 1
+Nome: João da Silva
+Endereço: Rua das Flores, 100
+Número de telefone: (11) 98765-4321

@@ -1,0 +1,45 @@
+PL/SQL, que significa "Procedural Language extensions to SQL", é a linguagem de programação 
+procedural da Oracle que estende o SQL padrão. Ele oferece recursos modernos de software, 
+como condicionais, loops e exceções, que permitem que você manipule e processe dados no Oracle Database.
+
+Aqui está uma breve introdução aos principais conceitos do PL/SQL:
+
+Blocos PL/SQL: Um bloco PL/SQL é a unidade básica e atômica na linguagem PL/SQL. É composto 
+por três partes: a seção de declaração, a seção executável e a seção de exceção.
+
+Exemplo:
+
+DECLARE
+   -- Seção de declaração
+   x NUMBER(2);
+BEGIN
+   -- Seção executável
+   x := 3;
+   dbms_output.put_line('x = ' || TO_CHAR(x));
+EXCEPTION
+   -- Seção de exceção
+   WHEN OTHERS THEN
+   dbms_output.put_line('Erro encontrado');
+END;
+
+Procedimentos e Funções: Procedimentos e funções são blocos PL/SQL nomeados que podem ser chamados e 
+reutilizados várias vezes. A diferença entre eles é que uma função deve retornar um valor, 
+mas um procedimento não.
+
+Pacotes: Pacotes são grupos de procedimentos, funções, variáveis e constantes relacionados.
+
+Triggers: Triggers são procedimentos armazenados que são disparados, ou executados, em resposta a 
+eventos específicos no banco de dados, como inserções, atualizações ou exclusões.
+
+Cursosres: Cursores são usados para controlar o processamento de cada linha em um conjunto de 
+resultados de uma consulta.
+
+Exceções: Exceções são eventos que alteram o fluxo normal de execução. O PL/SQL possui muitas exceções 
+predefinidas e também permite que você crie suas próprias.
+
+Coleções: As coleções são estruturas de dados semelhantes aos arrays em outras linguagens de programação. 
+As coleções no PL/SQL incluem listas, matrizes associativas e tabelas aninhadas.
+
+O PL/SQL é fundamentalmente integrado ao Oracle Database, oferecendo eficiência na manipulação de dados 
+e processamento no servidor. O uso de PL/SQL permite mover uma grande quantidade de lógica de 
+processamento de dados para o servidor de banco de dados, melhorando assim a eficiência geral das aplicações.

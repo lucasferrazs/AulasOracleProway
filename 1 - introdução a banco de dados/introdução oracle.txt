@@ -1,0 +1,54 @@
+Oracle Database é um sistema de gerenciamento de banco de dados 
+relacional (RDBMS) desenvolvido e comercializado pela Oracle 
+Corporation. É um dos RDBMS mais confiáveis, robustos e complexos 
+do mundo, comumente usado por grandes organizações que precisam 
+gerenciar grandes volumes de dados.
+
+Características do Oracle Database
+
+Confiabilidade e Segurança: O Oracle Database é conhecido por 
+sua segurança robusta, com muitos recursos incorporados para 
+proteger os dados contra acessos não autorizados, incluindo auditoria, 
+controle de acesso, autenticação e criptografia de dados.
+
+Escalabilidade: O Oracle Database pode lidar com tudo, desde 
+pequenas aplicações a grandes aplicações com bilhões de transações.
+
+Desempenho: O Oracle Database inclui uma variedade de recursos 
+para maximizar a eficiência do processamento de dados, incluindo 
+otimização de consultas, indexação, particionamento de tabelas e
+muito mais.
+
+Recursos Avançados: O Oracle Database suporta programação PL/SQL, 
+permite a replicação de dados, e possui uma grande variedade de 
+tipos de dados, incluindo LOBs, arrays, e tipos de dados de objeto.
+
+Recuperação e Backup: O Oracle Database possui recursos integrados 
+para backup e recuperação de dados, o que é crucial para proteger 
+os dados contra perdas ou danos.
+
+Versões do Oracle Database
+
+Existem várias versões do Oracle Database disponíveis, cada uma 
+com seu próprio conjunto de recursos e capacidades. As versões 
+mais recentes do Oracle Database incluem melhorias significativas 
+em termos de desempenho, segurança, escalabilidade e uma série de 
+novos recursos.
+
+Aprendendo Oracle Database
+
+Se você está começando a aprender Oracle Database, é recomendável 
+começar com os fundamentos do SQL e do modelo relacional, pois esses 
+serão cruciais para entender como trabalhar com qualquer RDBMS, 
+incluindo o Oracle. Depois de ter uma boa compreensão dos fundamentos, 
+você pode se aprofundar em tópicos mais específicos do Oracle, como a 
+linguagem de programação PL/SQL, administração de banco de dados Oracle, 
+e recursos avançados, como Real Application Clusters (RAC), Oracle Data Guard, 
+e Oracle GoldenGate.
+
+Lembre-se de que a prática é essencial quando se trata de aprender 
+uma nova tecnologia, portanto, tente obter o máximo de experiência 
+prática possível ao aprender Oracle Database. Além disso, existem 
+muitos recursos disponíveis online, incluindo documentação oficial, 
+tutoriais, blogs, fóruns e cursos online, que você pode usar para 
+auxiliar em seu aprendizado.

@@ -1,0 +1,65 @@
+Login Desktop
+
+login: nome.sobrenome
+senha: nome.sobrenome
+
+vai pedir pra definir uma nova senha.
+
+http://atena.proway.com.br/atena/central-instrutor/login
+
+login: email (caso não funcione, solicitar suporte)
+senha: proway123
+
+lector.live/proway
+
+login: email
+senha: proway
+
+Código do aluno é o login dele no desktop
+
+1º curso
+login: código
+senha: código
+
+vai pedir pra definir uma nova senha.
+
+Caso o aluno já tenha realizado outro treinamento
+
+Login: código
+senha: ja foi definida.
+
+Caso o aluno esqueça a senha, solicitar ao suporte que faça o reset.
+
+Usuario generico:
+
+Login: aluno
+Senha: aluno
+
+Login: moc
+senha: Pa55w.rd
+
+Pedir para o aluno salvar os conteúdos na rede.
+
+win+r
+\\svprwy002\alunos\cod
+\\svprwy002\instrutores\NOME
+
+
+Avaliação diaria
+
+proway.com.br
+
+
+Video Boas Vindas
+
+proway.com.br/boasvindas
+
+WhatsApp Suporte:
+
+Valter: +55 47 9287-7732
+Gabriely: 47 99252-8787
+
+Wifi
+
+WFALUNOS
+senha: #vistadaproway
