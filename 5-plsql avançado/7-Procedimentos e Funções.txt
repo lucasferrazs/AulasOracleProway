@@ -1,0 +1,50 @@
+Procedimentos e funções são blocos de código PL/SQL nomeados que você pode chamar várias vezes. 
+Eles ajudam a tornar o código mais reutilizável e mais fácil de manter.
+
+A principal diferença entre um procedimento e uma função é que uma função retorna um valor, 
+enquanto um procedimento não.
+
+Procedimentos
+
+Um procedimento é um bloco de código PL/SQL que pode ter parâmetros de entrada e/ou saída e que 
+realiza uma tarefa específica. Veja um exemplo de procedimento:
+
+CREATE OR REPLACE PROCEDURE update_salary(p_employee_id IN NUMBER, p_new_salary IN NUMBER) AS
+BEGIN
+    UPDATE employees
+    SET salary = p_new_salary
+    WHERE employee_id = p_employee_id;
+
+    COMMIT;
+END;
+/
+
+Neste exemplo, update_salary é um procedimento que atualiza o salário de um funcionário. 
+Ele recebe dois parâmetros: p_employee_id e p_new_salary.
+
+Funções
+
+Uma função é um bloco de código PL/SQL que pode ter parâmetros de entrada (mas não de saída), 
+que realiza uma tarefa específica e retorna um valor. Veja um exemplo de função:
+
+CREATE OR REPLACE FUNCTION get_salary(p_employee_id IN NUMBER) RETURN NUMBER AS
+    v_salary NUMBER(8, 2);
+BEGIN
+    SELECT salary
+    INTO v_salary
+    FROM employees
+    WHERE employee_id = p_employee_id;
+
+    RETURN v_salary;
+EXCEPTION
+    WHEN NO_DATA_FOUND THEN
+        RETURN NULL;
+END;
+/
+
+Neste exemplo, get_salary é uma função que retorna o salário de um funcionário. Ela recebe um parâmetro 
+p_employee_id. A palavra-chave RETURN é usada para especificar o tipo de dado que a função retornará.
+
+Os procedimentos e funções podem ser chamados a partir de blocos PL/SQL, outros procedimentos e funções, 
+gatilhos e pacotes. Além disso, eles podem ser definidos dentro de pacotes para melhor organização e 
+encapsulamento do código.

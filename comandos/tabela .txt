@@ -1,0 +1,28 @@
+CREATE TABLE departments (
+  id NUMBER GENERATED ALWAYS AS IDENTITY,
+  name VARCHAR2(50) NOT NULL,
+  location VARCHAR2(50),
+  PRIMARY KEY (id)
+);
+
+CREATE TABLE employees (
+  id NUMBER GENERATED ALWAYS AS IDENTITY,
+  first_name VARCHAR2(50) NOT NULL,
+  last_name VARCHAR2(50) NOT NULL,
+  email VARCHAR2(100) NOT NULL,
+  hire_date DATE NOT NULL,
+  salary NUMBER(8,2) NOT NULL,
+  department_id NUMBER,
+  PRIMARY KEY (id),
+  FOREIGN KEY (department_id) REFERENCES departments(id)
+);
+
+CREATE TABLE projects (
+  id NUMBER GENERATED ALWAYS AS IDENTITY,
+  name VARCHAR2(100) NOT NULL,
+  start_date DATE NOT NULL,
+  end_date DATE,
+  employee_id NUMBER,
+  PRIMARY KEY (id),
+  FOREIGN KEY (employee_id) REFERENCES employees(id)
+);

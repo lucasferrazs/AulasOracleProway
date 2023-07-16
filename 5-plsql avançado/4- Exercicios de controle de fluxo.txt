@@ -1,0 +1,19 @@
+Exercício 1: Escreva um bloco PL/SQL que imprime "Par" ou "Ímpar" para números de 1 a 10 usando a estrutura de controle IF-THEN-ELSE.
+
+Exercício 2: Crie um bloco PL/SQL que classifique uma pontuação de teste (de 1 a 100) em A, B, C, D ou F usando a estrutura de controle CASE.
+
+Exercício 3: Use um loop FOR para calcular o fatorial de um número.
+
+Exercício 4: Use um loop WHILE para imprimir a série Fibonacci até 100.
+
+Exercício 5: Escreva um bloco PL/SQL que use IF-THEN-ELSE para verificar se um ano é bissexto ou não.
+
+Exercício 6: Use a estrutura de controle CASE para converter um número de dia da semana (1-7) para o nome do dia da semana (Domingo-Sábado).
+
+Exercício 7: Use um loop FOR para imprimir uma pirâmide de asteriscos, onde o número de linhas é um valor fornecido pelo usuário.
+
+Exercício 8: Use um loop WHILE para criar uma calculadora simples que executa operações de adição, subtração, multiplicação e divisão com base na escolha do usuário.
+
+Exercício 9: Escreva um bloco PL/SQL que use a estrutura de controle IF-THEN-ELSE para verificar se um número é positivo, negativo ou zero.
+
+Exercício 10: Use a estrutura de controle CASE para criar um menu simples que permite ao usuário escolher entre diferentes opções e executar diferentes blocos de código com base na escolha do usuário.

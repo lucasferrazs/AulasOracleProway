@@ -1,0 +1,33 @@
+A arquitetura do Oracle Database é uma estrutura complexa e robusta que permite a execução eficiente, 
+segura e rápida de instruções SQL. Aqui estão os principais componentes da arquitetura do Oracle Database:
+
+1. Instância do Oracle Database: Uma instância é uma coleção de processos de background e memória que 
+interagem com o banco de dados. Cada instância é associada a um (e apenas um) banco de dados. 
+Aqui estão os principais componentes de uma instância:
+
+Área de Memória do Sistema (System Global Area, SGA): Este é o espaço de memória compartilhada que contém informações de cache, 
+como blocos de dados e instruções SQL. A SGA é essencial para o desempenho e eficiência da instância.
+
+Processos em segundo plano (Background Processes): Esses são processos que executam tarefas de gerenciamento e 
+manutenção do banco de dados, como gerenciamento de memória e gerenciamento de transações.
+
+2. Banco de dados físico: O banco de dados físico consiste nos arquivos físicos que armazenam os dados do 
+banco de dados. Estes incluem arquivos de dados (que armazenam os próprios dados), arquivos de controle 
+(que rastreiam a estrutura do banco de dados) e arquivos de redo log (que registram todas as mudanças feitas no banco de dados).
+
+3. Banco de dados lógico: O banco de dados lógico é a organização dos dados a partir de uma perspectiva de 
+usuário ou aplicativo. Ele é composto de tabelas, índices, clusters, procedures, funções, triggers e outros
+ objetos que os usuários e aplicativos interagem diretamente.
+
+4. Servidor Oracle e Cliente Oracle: O servidor Oracle é o sistema que executa o software do Oracle Database
+ e manipula solicitações de banco de dados. O cliente Oracle é o aplicativo ou usuário que envia solicitações ao servidor Oracle.
+
+5. Redo Logs: O Oracle Database usa redo logs para proteger o banco de dados contra falhas. Redo logs são 
+registros de todas as alterações feitas no banco de dados. Se o sistema falhar, o Oracle Database pode usar 
+os redo logs para restaurar o banco de dados ao seu estado antes da falha.
+
+6. Arquivos de Controle: Esses arquivos são cruciais para o funcionamento do banco de dados, pois contêm metadados sobre a estrutura do banco de dados.
+
+7. Datafiles e Tablespaces: Cada banco de dados Oracle é composto por um ou mais datafiles. Cada datafile 
+pertence a um tablespace. Os tablespaces são a ligação entre o banco de dados físico (os arquivos no disco) e o 
+banco de dados lógico (as tabelas e índices que os usuários e aplicativos interagem)

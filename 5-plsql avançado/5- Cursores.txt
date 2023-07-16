@@ -1,0 +1,56 @@
+Os cursores no Oracle PL/SQL são usados para recuperar várias linhas de uma consulta 
+SQL e processá-las uma de cada vez. Eles são especialmente úteis quando você precisa 
+manipular ou examinar cada linha individualmente.
+
+Existem dois tipos principais de cursores no PL/SQL: cursores implícitos e cursores explícitos.
+
+Cursores Implícitos
+
+Os cursores implícitos são criados automaticamente pelo Oracle quando uma instrução SQL é 
+executada. Você não precisa declará-los explicitamente.
+
+Um exemplo de uso de um cursor implícito seria:
+
+DECLARE
+    count NUMBER(4);
+BEGIN
+    SELECT COUNT(*) INTO count FROM employees WHERE salary > 5000;
+    DBMS_OUTPUT.PUT_LINE('Number of employees with salary > 5000: ' || count);
+END;
+/
+
+Cursores Explícitos
+
+Os cursores explícitos, por outro lado, precisam ser declarados explicitamente no 
+bloco de declaração de um bloco PL/SQL. Eles são usados quando você precisa recuperar 
+mais de uma linha de uma consulta.
+
+Um exemplo de uso de um cursor explícito seria:
+
+DECLARE
+    CURSOR emp_cursor IS
+    SELECT * FROM employees;
+    
+    emp_record emp_cursor%ROWTYPE;
+BEGIN
+    OPEN emp_cursor;
+    
+    LOOP
+        FETCH emp_cursor INTO emp_record;
+        
+        EXIT WHEN emp_cursor%NOTFOUND;
+        
+        DBMS_OUTPUT.PUT_LINE(emp_record.first_name || ' ' || emp_record.last_name);
+    END LOOP;
+    
+    CLOSE emp_cursor;
+END;
+/
+
+Este bloco de código declara um cursor para selecionar todas as linhas da tabela de funcionários. 
+Ele então abre o cursor, inicia um loop, e para cada iteração do loop, busca a próxima linha do 
+cursor e imprime o nome e sobrenome do funcionário. O loop continua até que não haja mais linhas 
+para buscar do cursor, momento em que o cursor é fechado.
+
+O processo de usar um cursor explícito geralmente envolve as seguintes etapas: Declarar o cursor,
+ Abrir o cursor, Buscar linhas do cursor, Fechar o cursor.

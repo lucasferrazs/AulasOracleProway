@@ -1,0 +1,35 @@
+Um gatilho (trigger) é um bloco de código PL/SQL armazenado no banco de dados que é 
+automaticamente executado ou disparado quando um evento específico ocorre. Os gatilhos 
+podem ser definidos para disparar em eventos de DML (Data Manipulation Language - como 
+INSERT, UPDATE, DELETE) em uma tabela específica, ou eventos de DDL (Data Definition Language - 
+como CREATE, ALTER, DROP) em um esquema ou banco de dados.
+
+Os gatilhos são úteis para manter a integridade dos dados, para auditar alterações nos dados, 
+ou para implementar regras de negócio que são baseadas em alterações de dados.
+
+Aqui está um exemplo de gatilho que registra uma auditoria de inserções na tabela employees:
+
+CREATE OR REPLACE TRIGGER employees_insert_audit
+AFTER INSERT ON employees
+FOR EACH ROW
+BEGIN
+    INSERT INTO audit_table (action, table_name, user, timestamp)
+    VALUES ('INSERT', 'EMPLOYEES', USER, SYSDATE);
+END;
+/
+
+Neste exemplo, employees_insert_audit é um gatilho que é disparado após cada inserção na tabela employees. 
+Quando o gatilho é disparado, ele insere um registro na tabela audit_table para registrar a ação.
+
+Os gatilhos podem ser classificados em vários tipos, dependendo de quando são disparados e que tipo de operação dispara o gatilho:
+
+BEFORE ou AFTER: Indica se o gatilho deve ser disparado antes ou depois da operação de DML ou DDL.
+
+INSERT, UPDATE, DELETE, CREATE, ALTER, DROP: Indica que tipo de operação de DML ou DDL dispara o gatilho.
+
+FOR EACH ROW ou FOR EACH STATEMENT: Indica se o gatilho deve ser disparado para cada linha que a operação afeta 
+(FOR EACH ROW) ou apenas uma vez por operação, independentemente de quantas linhas são afetadas (FOR EACH STATEMENT).
+
+Além disso, dentro de um gatilho FOR EACH ROW, você pode acessar os valores antigos e novos da linha que disparou o 
+gatilho usando :OLD e :NEW, respectivamente. Por exemplo, :OLD.salary se refere ao valor antigo do campo salary, e 
+:NEW.salary se refere ao novo valor.

@@ -1,0 +1,99 @@
+As estruturas de controle de fluxo em PL/SQL são usadas para controlar a sequência de 
+execução de várias instruções no bloco de código. Elas são semelhantes às estruturas 
+de controle de fluxo que você encontraria em outras linguagens de programação. 
+As principais estruturas de controle de fluxo em PL/SQL incluem:
+
+IF-THEN-ELSE: Essa estrutura de controle é usada para executar diferentes blocos de 
+código com base na avaliação de uma condição.
+
+IF condition THEN
+    -- Bloco de código para executar se a condição for verdadeira
+ELSE
+    -- Bloco de código para executar se a condição for falsa
+END IF;
+
+exemplo:
+
+
+DECLARE 
+    a NUMBER(2); 
+BEGIN 
+    a := 10;
+
+    IF a > 20 THEN 
+        dbms_output.put_line('A é maior que 20'); 
+    ELSE 
+        dbms_output.put_line('A não é maior que 20'); 
+    END IF; 
+END; 
+/
+
+
+CASE: A estrutura de controle CASE é usada para selecionar um entre vários possíveis 
+blocos de código para execução.
+
+CASE variable
+    WHEN value1 THEN
+        -- Bloco de código para executar se a variável for igual a value1
+    WHEN value2 THEN
+        -- Bloco de código para executar se a variável for igual a value2
+    ELSE
+        -- Bloco de código para executar se a variável não for igual a nenhum dos valores especificados
+END CASE;
+
+exemplo:
+
+DECLARE 
+    grade CHAR(1); 
+BEGIN 
+    grade := 'A';
+
+    CASE grade 
+        WHEN 'A' THEN 
+            dbms_output.put_line('Excelente'); 
+        WHEN 'B' THEN 
+            dbms_output.put_line('Bom'); 
+        ELSE 
+            dbms_output.put_line('Não classificado'); 
+    END CASE; 
+END; 
+/
+
+
+LOOP: Existem várias formas de loops em PL/SQL que são usadas para repetir um bloco de 
+código várias vezes. Exemplos incluem FOR loops, WHILE loops e loops simples.
+
+-- FOR loop
+FOR i IN 1..10 LOOP
+    -- Bloco de código para repetir 10 vezes
+END LOOP;
+
+exemplo:
+-- FOR loop
+DECLARE 
+BEGIN 
+    FOR i IN 1..10 LOOP
+        dbms_output.put_line('Número: ' || i); 
+    END LOOP; 
+END; 
+/
+
+
+
+-- WHILE loop
+WHILE condition LOOP
+    -- Bloco de código para repetir enquanto a condição for verdadeira
+END LOOP;
+
+-- WHILE loop
+DECLARE 
+    a NUMBER(2); 
+BEGIN 
+    a := 5;
+
+    WHILE a > 0 LOOP
+        dbms_output.put_line('Número: ' || a);
+        a := a - 1; 
+    END LOOP; 
+END; 
+/

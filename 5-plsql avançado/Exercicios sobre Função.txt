@@ -1,0 +1,25 @@
+Exercício 1: Procedimento para adicionar um empregado
+
+Crie um procedimento chamado add_employee que aceita os seguintes parâmetros: p_first_name, p_last_name, p_job_id,
+ p_manager_id, p_salary, p_department_id. Este procedimento deve inserir um novo registro na 
+tabela employees com os dados fornecidos.
+
+Exercício 2: Função para recuperar o salário de um empregado
+
+Crie uma função chamada get_salary que aceita um parâmetro p_employee_id. Esta função deve retornar 
+o salário do empregado com o ID fornecido.
+
+Exercício 3: Procedimento para aumentar o salário
+
+Crie um procedimento chamado increase_salary que aceita dois parâmetros: p_employee_id e p_percentage. 
+Este procedimento deve aumentar o salário do empregado com o ID fornecido em p_percentage percent.
+
+Exercício 4: Função para recuperar o número total de empregados
+
+Crie uma função chamada get_total_employees que não aceita nenhum parâmetro. Esta função deve retornar 
+o número total de empregados na tabela employees.
+
+Exercício 5: Procedimento para deletar um empregado
+
+Crie um procedimento chamado delete_employee que aceita um parâmetro: p_employee_id. Este procedimento deve deletar 
+o registro do empregado com o ID fornecido da tabela employees.

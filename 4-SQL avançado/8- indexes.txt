@@ -1,0 +1,28 @@
+Índices são estruturas de dados que melhoram a velocidade das operações de recuperação de 
+dados em um banco de dados. Eles são semelhantes aos índices de um livro que permitem 
+encontrar informações específicas rapidamente, sem ter que ler o livro inteiro.
+
+No Oracle, um índice é uma cópia ordenada de um ou mais atributos da tabela que melhora o 
+desempenho das consultas. Eles são especialmente úteis para consultas que selecionam um 
+pequeno subconjunto de uma grande tabela.
+
+Os principais tipos de índices no Oracle incluem:
+
+Índices B-tree: Este é o tipo de índice mais comum em bancos de dados Oracle. Eles armazenam 
+ponteiros para linhas de uma tabela em uma estrutura de árvore B, permitindo consultas rápidas.
+
+Índices Bitmap: Estes são usados principalmente em colunas que têm um número pequeno de 
+valores distintos, também conhecidos como colunas de baixa cardinalidade. Eles são 
+eficientes em consultas complexas que envolvem muitas tabelas.
+
+Índices de função: São índices baseados em expressões. Se você frequentemente recupera 
+dados com uma expressão específica, pode criar um índice de função para acelerar 
+essas consultas.
+
+Índices de particionamento: Eles permitem que o Oracle divida uma tabela grande em partes 
+menores e mais gerenciáveis, chamadas partições, cada uma com seu próprio índice.
+
+Embora os índices possam acelerar a recuperação de dados, eles também têm custos. Os índices 
+ocupam espaço de armazenamento e podem tornar as operações de inserção, atualização e 
+exclusão mais lentas, pois o índice também precisa ser atualizado quando os dados são 
+modificados. Portanto, é importante um bom design de índices para equilibrar esses trade-offs.

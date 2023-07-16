@@ -1,8 +1,12 @@
-No PL/SQL, as variáveis e constantes são declaradas na seção DECLARE de um bloco de código, e cada uma deve ter um tipo de dados associado. Ambas são usadas para armazenar dados que podem ser usados ​​mais tarde no bloco de código.
+No PL/SQL, as variáveis e constantes são declaradas na seção DECLARE de um bloco de código, 
+e cada uma deve ter um tipo de dados associado. Ambas são usadas para armazenar dados que 
+podem ser usados ​​mais tarde no bloco de código.
 
 Variáveis
 
-Uma variável é um nome simbólico para um local de armazenamento que contém um valor que pode ser modificado durante a execução do programa. Aqui está um exemplo de como declarar e usar uma variável:
+Uma variável é um nome simbólico para um local de armazenamento que contém um valor que 
+pode ser modificado durante a execução do programa. Aqui está um exemplo de como declarar 
+e usar uma variável:
 
 DECLARE
    my_var NUMBER(5);
@@ -10,3 +14,27 @@ BEGIN
    my_var := 100;
    dbms_output.put_line('Valor de my_var: ' || my_var);
 END;
+
+No exemplo acima, my_var é uma variável do tipo NUMBER. O operador := é usado para 
+atribuir um valor à variável.
+
+Constantes
+
+Uma constante é semelhante a uma variável, exceto que seu valor é definido quando é 
+declarada e não pode ser alterado posteriormente. Aqui está um exemplo de como 
+declarar e usar uma constante:
+
+DECLARE
+   my_const CONSTANT NUMBER := 100;
+BEGIN
+   dbms_output.put_line('Valor de my_const: ' || my_const);
+END;
+
+No exemplo acima, my_const é uma constante do tipo NUMBER. Note o uso da palavra-chave 
+CONSTANT e a necessidade de inicializar a constante no momento da declaração.
+
+Você pode usar variáveis ​​e constantes em expressões, consultas SQL e para controlar o 
+fluxo de execução em estruturas de controle, como loops e condicionais. Ao escolher 
+entre variáveis ​​e constantes, use uma constante quando souber que o valor não deve ser 
+alterado. Isso torna seu código mais legível e evita bugs causados ​​por alterações 
+acidentais de valor.

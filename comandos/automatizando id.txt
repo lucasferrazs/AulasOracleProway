@@ -1,0 +1,30 @@
+Primeiro, crie uma sequência:
+
+CREATE SEQUENCE emp_seq
+START WITH 1
+INCREMENT BY 1;
+
+Esta sequência começará com 1 e será incrementada em 1 a cada vez que for utilizada.
+
+Em seguida, crie um gatilho na tabela de funcionários que será ativado antes de cada inserção. 
+Este gatilho usará a sequência para definir o valor de employee_id:
+
+CREATE OR REPLACE TRIGGER emp_bir 
+BEFORE INSERT ON employees 
+FOR EACH ROW
+
+BEGIN
+  SELECT emp_seq.NEXTVAL
+  INTO :new.employee_id
+  FROM dual;
+END;
+/
+
+Agora, sempre que você inserir uma linha na tabela employees sem especificar um 
+valor para employee_id, o gatilho automaticamente atribuirá o próximo valor da sequência 
+emp_seq ao employee_id.
+
+Por exemplo, você pode inserir um novo funcionário assim:
+
+INSERT INTO employees (first_name, last_name, job_id, salary) 
+VALUES ('John', 'Doe', 'DEV', 5000.00);

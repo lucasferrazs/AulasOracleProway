@@ -1,4 +1,7 @@
-As views, também conhecidas como vistas, são uma ferramenta poderosa no SQL que permite que os usuários crie uma espécie de "tabela virtual" baseada no resultado de uma consulta. Elas podem simplificar consultas SQL, ocultar a complexidade dos dados e fornecer um nível extra de segurança.
+As views, também conhecidas como vistas, são uma ferramenta poderosa no SQL que permite 
+que os usuários crie uma espécie de "tabela virtual" baseada no resultado de uma consulta. 
+Elas podem simplificar consultas SQL, ocultar a complexidade dos dados e fornecer um nível 
+extra de segurança.
 
 Aqui está como você pode criar uma view no Oracle:
 
@@ -7,7 +10,10 @@ SELECT column1, column2, ...
 FROM table_name
 WHERE condition;
 
-Por exemplo, vamos supor que temos uma tabela employees com as colunas employee_id, first_name, last_name, email, phone_number, hire_date, job_id, salary, commission_pct, manager_id e department_id. Podemos criar uma view que mostre apenas o first_name, last_name e email:
+Por exemplo, vamos supor que temos uma tabela employees com as colunas employee_id, 
+first_name, last_name, email, phone_number, hire_date, job_id, salary, commission_pct, 
+manager_id e department_id. Podemos criar uma view que mostre apenas o first_name, 
+last_name e email:
 
 CREATE VIEW employee_contacts AS
 SELECT first_name, last_name, email
@@ -17,8 +23,13 @@ Depois de criada, você pode consultar a view como se fosse uma tabela:
 
 SELECT * FROM employee_contacts;
 
-As views podem ser muito úteis quando você tem consultas complexas que são usadas com frequência. Ao invés de escrever a consulta complexa várias vezes, você pode criar uma view e depois consultar a view.
+As views podem ser muito úteis quando você tem consultas complexas que são usadas 
+com frequência. Ao invés de escrever a consulta complexa várias vezes, você pode 
+criar uma view e depois consultar a view.
 
-É importante notar que as views são somente leitura por padrão. Isso significa que você não pode usar uma view para modificar as tabelas subjacentes (por exemplo, com instruções INSERT, UPDATE ou DELETE).
+É importante notar que as views são somente leitura por padrão. Isso significa que 
+você não pode usar uma view para modificar as tabelas subjacentes (por exemplo, com 
+instruções INSERT, UPDATE ou DELETE).
 
-Além disso, quando os dados nas tabelas subjacentes são alterados, os dados na view também são alterados, pois uma view sempre mostra os dados atuais.
+Além disso, quando os dados nas tabelas subjacentes são alterados, os dados na view 
+também são alterados, pois uma view sempre mostra os dados atuais.

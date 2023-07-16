@@ -1,0 +1,51 @@
+O tratamento de exceções é um aspecto crucial de qualquer linguagem de programação e o 
+PL/SQL não é uma exceção. Ele tem suporte a várias formas de tratar erros e exceções 
+que podem ocorrer durante a execução do código.
+
+No PL/SQL, as exceções são divididas em duas categorias:
+
+Exceções pré-definidas: São exceções já definidas pela linguagem PL/SQL. Exemplos 
+incluem NO_DATA_FOUND (quando uma consulta SQL não retorna dados) e ZERO_DIVIDE 
+(quando você tenta dividir por zero).
+
+Exceções definidas pelo usuário: Você pode definir suas próprias exceções no PL/SQL. 
+Isso é útil quando você quer capturar e tratar erros específicos do seu aplicativo que 
+não são cobertos pelas exceções pré-definidas.
+
+Um bloco de tratamento de exceções no PL/SQL é iniciado com a palavra-chave EXCEPTION e 
+vem após o bloco de código BEGIN/END. Aqui está um exemplo de como você pode tratar uma 
+exceção em PL/SQL:
+
+DECLARE
+    v_divisor NUMBER := 0;
+    v_result NUMBER;
+BEGIN
+    v_result := 100 / v_divisor;
+EXCEPTION
+    WHEN ZERO_DIVIDE THEN
+        dbms_output.put_line('Erro: Divisão por zero.');
+END;
+/
+
+Neste exemplo, estamos tentando dividir 100 por zero, o que resultará em uma exceção 
+ZERO_DIVIDE. Quando essa exceção é lançada, o controle é passado para o bloco EXCEPTION, 
+onde tratamos a exceção exibindo uma mensagem de erro.
+
+Você também pode definir e levantar suas próprias exceções:
+
+DECLARE
+    e_custom_exception EXCEPTION;
+    v_value NUMBER := -1;
+BEGIN
+    IF v_value < 0 THEN
+        RAISE e_custom_exception;
+    END IF;
+EXCEPTION
+    WHEN e_custom_exception THEN
+        dbms_output.put_line('Erro: Valor negativo.');
+END;
+/
+
+Neste exemplo, definimos nossa própria exceção e_custom_exception. Se v_value for menor que zero, 
+levantamos a exceção e_custom_exception. Quando essa exceção é lançada, o controle é passado para 
+o bloco EXCEPTION, onde tratamos a exceção exibindo uma mensagem de erro.
