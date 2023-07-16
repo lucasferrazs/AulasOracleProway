@@ -10,10 +10,137 @@ Exercício 5: Escreva um bloco PL/SQL que use IF-THEN-ELSE para verificar se um 
 
 Exercício 6: Use a estrutura de controle CASE para converter um número de dia da semana (1-7) para o nome do dia da semana (Domingo-Sábado).
 
-Exercício 7: Use um loop FOR para imprimir uma pirâmide de asteriscos, onde o número de linhas é um valor fornecido pelo usuário.
+Exercício 7: Escreva um bloco PL/SQL que use a estrutura de controle IF-THEN-ELSE para verificar se um número é positivo, negativo ou zero.
 
 Exercício 8: Use um loop WHILE para criar uma calculadora simples que executa operações de adição, subtração, multiplicação e divisão com base na escolha do usuário.
 
-Exercício 9: Escreva um bloco PL/SQL que use a estrutura de controle IF-THEN-ELSE para verificar se um número é positivo, negativo ou zero.
 
-Exercício 10: Use a estrutura de controle CASE para criar um menu simples que permite ao usuário escolher entre diferentes opções e executar diferentes blocos de código com base na escolha do usuário.
+1-
+DECLARE 
+    a NUMBER(2); 
+BEGIN 
+    a := MOD(3,2);
+    
+    IF a = 0 THEN 
+        dbms_output.put_line('sim'); 
+    ELSE
+        dbms_output.put_line('nao'); 
+    END IF; 
+END; 
+/
+
+
+
+2-
+
+DECLARE 
+    grade NUMBER(3); 
+BEGIN 
+    grade := 99;
+
+    CASE 
+        WHEN grade between 0 and 20 THEN 
+            dbms_output.put_line('E'); 
+        WHEN grade between 21 and 40 THEN 
+            dbms_output.put_line('D'); 
+        WHEN grade between 41 and 60 THEN 
+            dbms_output.put_line('C');
+        WHEN grade between 61 and 80 THEN 
+            dbms_output.put_line('B');
+        WHEN grade between 81 and 100 THEN 
+            dbms_output.put_line('A');    
+        ELSE 
+            dbms_output.put_line('Não classificado'); 
+    END CASE; 
+END; 
+/
+
+
+3-
+-- FOR loop
+
+DECLARE 
+numero number(38);
+contador number(20);
+BEGIN 
+numero := 5;
+contador := numero;
+    FOR i IN 1..numero LOOP
+    
+    dbms_output.put_line('Número: ' || numero);
+    contador := contador - 1;
+    numero :=  numero * contador ;
+    
+    END LOOP; 
+END; 
+/
+
+4-
+//proximo numero é sempre  a soma dos 2 anteriores
+//0 – 1 – 1 – 2 – 3 – 5 – 8 – 13 – 21 – 34 – 55
+// F(n + 2) = F(n + 1) + F(n) , com n ≥ 1 e F(1) = F(2) = 1 
+
+-- WHILE loop
+DECLARE 
+    a NUMBER(20);
+    b number (20);
+    c number (10);
+    
+BEGIN 
+    a := 1;
+    b := 0;
+    c:=0;
+    WHILE a < 100 LOOP
+    b := b + a;
+    a := a+ b;
+    
+
+    dbms_output.put_line(b); 
+    dbms_output.put_line(a); 
+    END LOOP; 
+END; 
+/
+
+
+
+6-
+DECLARE 
+    grade NUMBER(3); 
+BEGIN 
+    grade := 7;
+
+    CASE 
+        WHEN grade = 1  THEN 
+            dbms_output.put_line('Domingo'); 
+        WHEN grade = 2 THEN 
+            dbms_output.put_line('Segunda'); 
+        WHEN grade = 3 THEN 
+            dbms_output.put_line('Terça');
+        WHEN grade = 4 THEN 
+            dbms_output.put_line('Quarta');
+        WHEN grade = 5 THEN 
+            dbms_output.put_line('Quinta');
+        WHEN grade = 6 THEN 
+            dbms_output.put_line('Sexta');
+        WHEN grade = 7 THEN 
+            dbms_output.put_line('Sabado');     
+        ELSE 
+            dbms_output.put_line('Não classificado'); 
+    END CASE; 
+END; 
+/
+
+7-DECLARE 
+    a NUMBER(2); 
+BEGIN 
+    a:= 0;
+    
+    IF a = 0 THEN 
+    dbms_output.put_line('zero'); 
+   ELSif a < 0 then 
+   dbms_output.put_line('negativo');
+   elsif a >0 then 
+   dbms_output.put_line('positivo'); 
+    END IF; 
+END; 
+/

@@ -22,12 +22,11 @@ BEGIN
 
     IF a > 20 THEN 
         dbms_output.put_line('A é maior que 20'); 
-    ELSE 
+    ELSE
         dbms_output.put_line('A não é maior que 20'); 
     END IF; 
 END; 
 /
-
 
 CASE: A estrutura de controle CASE é usada para selecionar um entre vários possíveis 
 blocos de código para execução.
@@ -58,6 +57,7 @@ BEGIN
     END CASE; 
 END; 
 /
+
 
 
 LOOP: Existem várias formas de loops em PL/SQL que são usadas para repetir um bloco de 
