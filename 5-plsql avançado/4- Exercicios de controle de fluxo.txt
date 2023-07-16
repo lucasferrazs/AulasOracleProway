@@ -144,3 +144,27 @@ BEGIN
     END IF; 
 END; 
 /
+
+
+8-
+DECLARE 
+    operador varchar2(30);
+    numero1 number(10);
+    numero2  number(10);
+    
+BEGIN 
+    operador := '-'; 
+    numero1 := 10;
+    numero2  := 20;
+
+   if operador = '+' THEN 
+   dbms_output.put_line(numero1 + numero2); 
+   elsif operador = '-' then 
+   dbms_output.put_line(numero1 - numero2); 
+   elsif operador = '*'  then 
+   dbms_output.put_line(numero1 * numero2); 
+   elsif operador = '/'  then 
+   dbms_output.put_line(numero1 / numero2); 
+    END IF; 
+END; 
+/
